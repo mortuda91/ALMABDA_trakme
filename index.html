@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منصة المبدأ للدرجة اليومية التراكمية</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- مكتبة التقاط الشاشة كصورة -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <!-- ✅ هذا القسم سيتم تصويره بالكامل -->
+  <div class="container" id="captureArea">
+
+    <div class="topbar">
+      <div class="topbar-right">مديرية تربية الرصافة الثالثة</div>
+      <div class="topbar-left">مدرسة المبدأ الابتدائية المختلطة</div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-badge">منصة رسمية</div>
+      <h1 class="title">منصة المبدأ للدرجة اليومية التراكمية</h1>
+      <p class="subtitle">إضافة حصص حسب الحاجة — جمع تلقائي — تقسيم تلقائي</p>
+    </div>
+
+    <div class="card">
+      <label class="label" for="studentName">اسم الطالب</label>
+      <input class="input" id="studentName" type="text" placeholder="اكتب اسم الطالب هنا" />
+    </div>
+
+    <div class="card">
+      <div class="section-head">
+        <div class="section-title">درجات الحصص (اختياري)</div>
+        <div class="section-note">أضف عدد الحصص الذي تريده للشعبة</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="addLessonBtn" type="button">إضافة حصة +</button>
+        <button class="btn btn-ghost" id="clearBtn" type="button">مسح الكل</button>
+      </div>
+
+      <div class="grid" id="lessonsGrid">
+        <!-- المربعات تُضاف هنا -->
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-head">
+        <div class="section-title">رقم القسمة (حر)</div>
+        <div class="section-note">ادخله حسب عدد حصصك/أيامك</div>
+      </div>
+      <input class="input" id="divider" type="number" placeholder="مثال: 18 أو 22 أو 10" />
+    </div>
+
+    <div class="results">
+      <div class="result-box">
+        <div class="result-title">مجموع الدرجات</div>
+        <div class="result-value" id="sum">0</div>
+      </div>
+
+      <div class="result-box">
+        <div class="result-title">رقم القسمة</div>
+        <div class="result-value" id="dividerView">—</div>
+      </div>
+
+      <div class="result-box gold-glow">
+        <div class="result-title">الدرجة التراكمية النهائية</div>
+        <div class="result-value" id="final">0</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>تصميم الاستاذ مرتضى الخفاجي</div>
+      <div class="footer-muted">حقوق التوزيع والتصميم حصراً للاستاذ مرتضى الخفاجي</div>
+    </div>
+
+  </div>
+
+  <!-- زر التحميل (خارج منطقة التصوير أو داخلها؟)
+       ✅ إذا تريده يظهر بالصورة: انقل هذا القسم داخل captureArea -->
+  <div class="download-wrap">
+    <button class="btn btn-download" id="downloadImgBtn" type="button">تحميل صورة كاملة للمنصة</button>
+    <div class="download-note">سيتم تحميل الصورة بصيغة PNG</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
